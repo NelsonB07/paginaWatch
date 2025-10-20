@@ -29,7 +29,19 @@ function atualizarCorSelecionada() {
 
      const nomeCor = opcoesCores[numCorSelecionada];
 
-     console.log(nomeCor);
+     tituloProduto.innerText = 
+        "Pulseira loop " + nomeCor.toLowerCase() + " para caixa " +
+        opcoesTamanho[numTamanhoSelecionado];
+
+        nomeCorSelecionada.innerText = "Cor - " + nomeCor;
+
+        imagemVisualizacao.src = "./imagens/opcoes-cores/imagens-" + nomeCor.toLowerCase() + "/imagem-" + numImagemSelecionada + ".jpeg";
+
+        imagemMiniatura0.src = "./imagens/opcoes-cores/imagens-" + nomeCor.toLowerCase() +"/imagem-0.jpeg";
+
+        imagemMiniatura1.src = "./imagens/opcoes-cores/imagens-" + nomeCor.toLowerCase() +"/imagem-1.jpeg";
+
+        imagemMiniatura2.src = "./imagens/opcoes-cores/imagens-" + nomeCor.toLowerCase() +"/imagem-2.jpeg";
 }
 
 
@@ -47,7 +59,7 @@ function atualizarTamanho() {
 
 
         tituloProduto.innerText = 
-        "Pulseira loop esportiva azul-inverno para caixa de " + tamanhoCaixa;
+        "Pulseira loop esportiva " + opcoesCores[numCorSelecionada].toLowerCase() + " para caixa de " + tamanhoCaixa;
 
         if(tamanhoCaixa === "41 mm") {
             
@@ -69,7 +81,7 @@ function atualizarImagemSelecionada() {
     // console.log(opcaoImagemSelecionada);
 
     imagemVisualizacao.src = 
-    "./imagens/opcoes-cores/imagens-azul-inverno/imagem-" + numImagemSelecionada +".jpeg";
+    "./imagens/opcoes-cores/imagens-" + opcoesCores[numCorSelecionada].toLowerCase() + "/imagem-" + numImagemSelecionada +".jpeg";
 }
 
 // atualizarImagemSelecionada();
